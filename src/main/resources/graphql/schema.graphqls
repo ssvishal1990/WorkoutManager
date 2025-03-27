@@ -1,0 +1,21 @@
+type Query {
+#    client: ClientDto
+    clients: [ClientDto]
+}
+
+type ClientDto {
+    id: ID
+    name: String
+    workoutOnDay: [WorkoutEntry]
+}
+
+type WorkoutEntry {
+    date: String
+    workouts: [WorkoutType]
+}
+
+enum WorkoutType {
+    WEIGHT_TRAINING
+    CARDIO
+}
+
